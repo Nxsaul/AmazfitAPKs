@@ -10,6 +10,7 @@ import com.huami.watch.watchface.util.Util;
 import com.ingenic.iwds.slpt.view.core.SlptAbsoluteLayout;
 import com.ingenic.iwds.slpt.view.core.SlptLayout;
 import com.ingenic.iwds.slpt.view.core.SlptLinearLayout;
+import com.ingenic.iwds.slpt.view.core.SlptNumView;
 import com.ingenic.iwds.slpt.view.core.SlptPictureView;
 import com.ingenic.iwds.slpt.view.core.SlptViewComponent;
 import com.ingenic.iwds.slpt.view.digital.SlptDayHView;
@@ -21,15 +22,21 @@ import com.ingenic.iwds.slpt.view.digital.SlptMinuteLView;
 import com.ingenic.iwds.slpt.view.digital.SlptMonthHView;
 import com.ingenic.iwds.slpt.view.digital.SlptMonthLView;
 import com.ingenic.iwds.slpt.view.digital.SlptWeekView;
+import com.ingenic.iwds.slpt.view.sport.SlptPowerNumView;
 import com.ingenic.iwds.slpt.view.utils.SimpleFile;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
-import es.malvarez.mywatchfaces.R;
+import java.lang.reflect.Field;
+
+import com.ravenliquid.watchfaces.R;
+import com.ravenliquid.watchfaces.Utility;
+
 import es.malvarez.mywatchfaces.resource.ResourceManager;
 
 /**
@@ -101,17 +108,17 @@ public class MalvarezClock extends DigitalClockWidget {
     @Override
     public List<SlptViewComponent> buildSlptViewComponent(Service service) {
         SlptPictureView background = new SlptPictureView();
-        background.setImagePicture(Util.assetToBytes(service, "background_splt.png"));
+        background.setImagePicture(SimpleFile.readFileFromAssets(service.getApplicationContext(), "background_splt.png"));
 
         SlptLinearLayout hourLayout = new SlptLinearLayout();
         hourLayout.add(new SlptHourHView());
         hourLayout.add(new SlptHourLView());
-        hourLayout.setStringPictureArrayForAll(this.digitalNums);
+        Utility.setStringPictureArrayForAll(hourLayout, this.digitalNums);
 
         SlptLinearLayout minuteLayout = new SlptLinearLayout();
         minuteLayout.add(new SlptMinuteHView());
         minuteLayout.add(new SlptMinuteLView());
-        minuteLayout.setStringPictureArrayForAll(this.digitalNums);
+        Utility.setStringPictureArrayForAll(minuteLayout, this.digitalNums);
 
         Typeface timeTypeFace = ResourceManager.getTypeFace(service.getResources(), ResourceManager.Font.BEBAS_NEUE);
 

@@ -13,7 +13,7 @@ import com.ingenic.iwds.slpt.view.sport.SlptLastHeartRateView;
 import java.util.Collections;
 import java.util.List;
 
-import es.malvarez.mywatchfaces.R;
+import com.ravenliquid.watchfaces.R;
 import es.malvarez.mywatchfaces.data.DataType;
 import es.malvarez.mywatchfaces.data.HeartRate;
 import es.malvarez.mywatchfaces.resource.ResourceManager;

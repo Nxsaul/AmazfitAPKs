@@ -19,10 +19,6 @@ import es.malvarez.mywatchfaces.widget.Widget;
 public abstract class AbstractWatchFace extends com.huami.watch.watchface.AbstractWatchFace {
 
 
-    final ClockWidget clock;
-    final LinkedList<Widget> widgets = new LinkedList<>();
-
-
     private class DigitalEngine extends com.huami.watch.watchface.AbstractWatchFace.DigitalEngine {
 
         private final DigitalClockWidget widget;
@@ -83,14 +79,16 @@ public abstract class AbstractWatchFace extends com.huami.watch.watchface.Abstra
         }
     }
 
+    final ClockWidget clock;
+    final LinkedList<Widget> widgets = new LinkedList<>();
 
-    protected AbstractWatchFace(ClockWidget clock, Widget... widgets) {
+    protected AbstractWatchFace(final ClockWidget clock, final Widget... widgets) {
         this.clock = clock;
         this.widgets.addAll(Arrays.asList(widgets));
     }
 
     public final Engine onCreateEngine() {
         notifyStatusBarPosition(12.0f);
-        return AnalogClockWidget.class.isInstance(this.clock) ? new AnalogEngine((AnalogClockWidget) this.clock) : new DigitalEngine((DigitalClockWidget) this.clock);
+        return AnalogClockWidget.class.isInstance(clock) ? new AnalogEngine((AnalogClockWidget) clock) : new DigitalEngine((DigitalClockWidget) clock);
     }
 }

@@ -1,5 +1,7 @@
 package es.malvarez.mywatchfaces.data;
 
+import it.drbourbon.mywatchfaces.widget.WeatherData;
+
 /**
  * Data types
  */
@@ -46,6 +48,12 @@ public enum DataType {
         @Override
         protected <E> E getValue(Object... args) {
             return (E) new Time((int) args[0], (int) args[1], (int) args[2], (int) args[3]);
+        }
+    },
+    WEATHER(8) {
+        @Override
+        protected <E> E getValue(Object... args) {
+            return (E) new WeatherData((String)args[0], (String)args[1], ((Integer)args[2]).intValue());
         }
     },
 

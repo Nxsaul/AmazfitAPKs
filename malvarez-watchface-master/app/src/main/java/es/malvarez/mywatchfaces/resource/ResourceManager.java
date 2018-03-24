@@ -12,7 +12,9 @@ import java.util.Map;
 public class ResourceManager {
 
     public enum Font {
-        BEBAS_NEUE("fonts/BebasNeue.otf");
+        BEBAS_NEUE("fonts/BebasNeue.otf"),
+        OPEN24("fonts/Open24DisplaySt.ttf");
+
 
         private final String path;
 

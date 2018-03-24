@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="drbourbon_fuzzytext_font_size">76px</dimen>
+    <dimen name="hugedigit_offset">-4px</dimen>
+    <dimen name="threelines_font_size">62px</dimen>
+    <dimen name="threelines_voffset">6px</dimen>
+    <dimen name="weather_font_size">22px</dimen>
+
 
     <dimen name="malvarez_time_hour_left">160px</dimen>
     <dimen name="malvarez_time_hour_top">145px</dimen>
@@ -56,7 +62,14 @@
     <dimen name="malvarez_sport_text_left_slpt">230px</dimen>
     <dimen name="malvarez_sport_text_top_slpt">193px</dimen>
 
-
+    <dimen name="timetravel_date_left">226.0px</dimen>
+    <dimen name="timetravel_date_top">132.0px</dimen>
+    <dimen name="timetravel_date_top_with_am">150.0px</dimen>
+    <dimen name="timetravel_week_left">229.0px</dimen>
+    <dimen name="timetravel_week_top">166.0px</dimen>
+    <dimen name="timetravel_week_top_with_am">183.0px</dimen>
+    <dimen name="timetravel_am_left">228.0px</dimen>
+    <dimen name="timetravel_am_top">119.0px</dimen>
 
 
 </resources>
