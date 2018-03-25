@@ -1,17 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="es.malvarez.mywatchfaces">
+    package="com.ravenliquid.watchfaces">
 
     <!-- Required to act as a custom watch face. -->
-    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
 
-    <application android:icon="@mipmap/ic_launcher" android:label="@string/app_name"  android:theme="@android:style/Theme.DeviceDefault">
-        <service android:name="es.malvarez.mywatchfaces.MalvarezWatchFaceSplt"/>
+    <application android:icon="@mipmap/ic_launcher" android:label="@string/app_name"  android:theme="@android:style/Theme.DeviceDefault" android:name="com.huami.watch.watchface.WatchfaceApplication">
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.huami.watch.watchface.custom.ui.WatchFaceSettingsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="com.huami.watch.watchface.custom.ui.WatchFaceCustomActivity"/>
 
-        <service android:name=".MalvarezWatchFace" android:label="@string/malvarez_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+        <service android:name="es.malvarez.mywatchfaces.MalvarezWatchFaceSplt" />
+        <service android:name="es.malvarez.mywatchfaces.MalvarezWatchFace" android:label="@string/malvarez_watch_face" android:permission="android.permission.BIND_WALLPAPER">
             <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
             <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_malvarez" />
             <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_malvarez" />
@@ -22,6 +27,74 @@
             </intent-filter>
         </service>
 
+        <service android:name="it.drbourbon.mywatchfaces.FuzzyTextWatchFaceSplt" />
+        <service android:name="it.drbourbon.mywatchfaces.FuzzyTextWatchFace" android:label="@string/fuzzytext_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_fuzzytext" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_fuzzytext" />
+            <meta-data android:name="com.huami.watch.watchface.hasslpt" android:value="true" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+
+        <service android:name="it.drbourbon.mywatchfaces.HugeDigitsWatchFaceSplt" />
+        <service android:name="it.drbourbon.mywatchfaces.HugeDigitsWatchFace" android:label="@string/fancydigits_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_hugetext" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_hugetext" />
+            <meta-data android:name="com.huami.watch.watchface.hasslpt" android:value="true" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+
+        <service android:name="it.drbourbon.mywatchfaces.ThreeLinesWatchFaceSplt" />
+        <service android:name="it.drbourbon.mywatchfaces.ThreeLinesWatchFace" android:label="@string/threelines_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_threelines" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_threelines" />
+            <meta-data android:name="com.huami.watch.watchface.hasslpt" android:value="true" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+
+        <service android:name="it.drbourbon.mywatchfaces.BigWeatherWatchFaceSplt" />
+        <service android:name="it.drbourbon.mywatchfaces.BigWeatherWatchFace" android:label="@string/bigweather_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_hugeweather" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_hugeweather" />
+            <meta-data android:name="com.huami.watch.watchface.hasslpt" android:value="true" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+
+        <service android:name="it.drbourbon.mywatchfaces.TextWatchFaceSplt" />
+        <service android:name="it.drbourbon.mywatchfaces.TextWatchFace" android:label="@string/texttime_watch_face" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/preview_texttime" />
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/preview_texttime" />
+            <meta-data android:name="com.huami.watch.watchface.hasslpt" android:value="true" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.huami.watch.watchface.slpt.Lock.SlptLockScreenService$ClearSportReceiver"/>
+        <receiver android:enabled="true" android:name="com.huami.watch.watchface.receiver.LocalChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="com.huami.intent.action.FILE_ARRIVED"/>
+                <action android:name="com.huami.intent.action.WATCHFACE_CONFIG_CHANGED"/>
+            </intent-filter>
+        </receiver>
 
 
     </application>

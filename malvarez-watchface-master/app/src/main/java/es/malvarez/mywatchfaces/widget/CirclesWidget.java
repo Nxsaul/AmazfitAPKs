@@ -17,11 +17,12 @@ import com.ingenic.iwds.slpt.view.core.SlptViewComponent;
 import com.ingenic.iwds.slpt.view.sport.SlptPowerNumView;
 import com.ingenic.iwds.slpt.view.sport.SlptTodaySportDistanceLView;
 import com.ingenic.iwds.slpt.view.sport.SlptTodayStepNumView;
+import com.ingenic.iwds.slpt.view.utils.SimpleFile;
 
 import java.util.Arrays;
 import java.util.List;
 
-import es.malvarez.mywatchfaces.R;
+import com.ravenliquid.watchfaces.R;
 import es.malvarez.mywatchfaces.data.Battery;
 import es.malvarez.mywatchfaces.data.DataType;
 import es.malvarez.mywatchfaces.data.Steps;
@@ -291,18 +292,18 @@ public class CirclesWidget extends AbstractWidget {
                 (int) service.getResources().getDimension(R.dimen.malvarez_sport_text_top_slpt));
 
         SlptPowerArcAnglePicView powerArcView = new SlptPowerArcAnglePicView();
-        powerArcView.setImagePicture(Util.assetToBytes(service, "battery_splt.png"));
+        powerArcView.setImagePicture(SimpleFile.readFileFromAssets(service.getApplicationContext(), "battery_splt.png"));
         powerArcView.start_angle = (int) startAngleBattery + 180 - 3;
         powerArcView.full_angle = (int) arcSizeBattery + 6;
 
         SlptTodayStepArcAnglePicView stepArcPicView = new SlptTodayStepArcAnglePicView();
-        stepArcPicView.setImagePicture(Util.assetToBytes(service, "steps_splt.png"));
+        stepArcPicView.setImagePicture(SimpleFile.readFileFromAssets(service.getApplicationContext(), "steps_splt.png"));
         stepArcPicView.start_angle = (int) startAngleSteps + 180 - 3;
         stepArcPicView.full_angle = (int) arcSizeSteps + 6;
 
 
         SlptTodayDistanceArcAnglePicView distanceArcPicView = new SlptTodayDistanceArcAnglePicView();
-        distanceArcPicView.setImagePicture(Util.assetToBytes(service, "sports_splt.png"));
+        distanceArcPicView.setImagePicture(SimpleFile.readFileFromAssets(service.getApplicationContext(), "sports_splt.png"));
         distanceArcPicView.start_angle = (int) startAngleSport + 180 - 3;
         distanceArcPicView.full_angle = (int) arcSizeSport + 6;
 

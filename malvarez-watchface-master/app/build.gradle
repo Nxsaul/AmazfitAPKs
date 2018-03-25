@@ -1,39 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 21
+    buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "es.malvarez.mywatchfaces"
-        minSdkVersion 22
-        targetSdkVersion 24
+        applicationId "com.ravenliquid.watchfaces"
+        minSdkVersion 21
+        targetSdkVersion 21
         versionCode 2
         versionName "1.1"
-        multiDexEnabled  true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    dexOptions {
-        jumboMode true
-        javaMaxHeapSize "4g"
-    }
+
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    compile ('com.android.support:appcompat-v7:21.0.3') {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile('com.android.support:appcompat-v7:21.0.3') {
         exclude module: 'support-v4'
     }
-
-
+    implementation files('src/main/java/es/malvarez/mywatchfaces/libs/HuamiWatchFaces2.jar')
 }
-
-
-
-
-

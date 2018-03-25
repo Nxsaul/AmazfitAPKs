@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="hugedigits_background">#000000</color>
+    <color name="threelines_background">#000000</color>
+    <color name="threelines_time_color">#ffffff</color>
+    <color name="threelines_date_color">#ff2600</color>
+    <color name="threelines_steps_color">#ff2600</color>
+
     <color name="malvarez_background">#000000</color>
     <color name="malvarez_background_slpt">#000000</color>
 
