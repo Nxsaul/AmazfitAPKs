@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">Amazfit Custom Watchfaces</string>
+    <string name="malvarez_watch_face">Malvarez</string>
+    <string name="fuzzytext_watch_face">Fuzzy Text</string>
+    <string name="texttime_watch_face">Text Time</string>
+    <string name="fancydigits_watch_face">Fancy Digits</string>
+    <string name="threelines_watch_face">Three Lines</string>
+    <string name="bigweather_watch_face">Big Weather</string>
+
+    <string name="sh1">one</string>
+    <string name="sh2">two</string>
+    <string name="sh3">three</string>
+    <string name="sh4">four</string>
+    <string name="sh5">five</string>
+    <string name="sh6">six</string>
+    <string name="sh7">seven</string>
+    <string name="sh8">eight</string>
+    <string name="sh9">nine</string>
+    <string name="sh10">ten</string>
+    <string name="sh11">eleven</string>
+    <string name="sh12">twelve</string>
+    <string name="sh0">zero</string>
+    <string name="sh1b">one</string>
+
+    <string name="ph1">*$1 o\'clock</string>
+    <string name="ph2">five past *$1</string>
+    <string name="ph3">ten past *$1</string>
+    <string name="ph4">quarter past *$1</string>
+    <string name="ph5">twenty past *$1</string>
+    <string name="ph6">twenty five past *$1</string>
+    <string name="ph7">half past *$1</string>
+    <string name="ph8">twenty five to *$2</string>
+    <string name="ph9">twenty to *$2</string>
+    <string name="ph10">quarter to *$2</string>
+    <string name="ph11">ten_to *$2</string>
+    <string name="ph12">five_to *$2</string>
+
+    <string name="w00">sunny</string>
+    <string name="w01">cloudy</string>
+    <string name="w02">overcast</string>
+    <string name="w03">fog</string>
+    <string name="w04">smog</string>
+    <string name="w05">shower</string>
+    <string name="w06">thunder</string>
+    <string name="w07">rain</string>
+    <string name="w08">rain</string>
+    <string name="w09">rain</string>
+    <string name="w10">rain</string>
+    <string name="w11">rain</string>
+    <string name="w12">sleet</string>
+    <string name="w13">freezing rain</string>
+    <string name="w14">hail</string>
+    <string name="w15">snow</string>
+    <string name="w16">snow</string>
+    <string name="w17">snow</string>
+    <string name="w18">snow</string>
+    <string name="w19">dust</string>
+    <string name="w20">sand</string>
+    <string name="w21">sand storm</string>
+
+    <string-array name="digits">
+        <item>@string/sh0</item>
+        <item>@string/sh1b</item>
+        <item>@string/sh2</item>
+        <item>@string/sh3</item>
+        <item>@string/sh4</item>
+        <item>@string/sh5</item>
+        <item>@string/sh6</item>
+        <item>@string/sh7</item>
+        <item>@string/sh8</item>
+        <item>@string/sh9</item>
+    </string-array>
+
+    <string-array name="hours">
+        <item>@string/sh1</item>
+        <item>@string/sh2</item>
+        <item>@string/sh3</item>
+        <item>@string/sh4</item>
+        <item>@string/sh5</item>
+        <item>@string/sh6</item>
+        <item>@string/sh7</item>
+        <item>@string/sh8</item>
+        <item>@string/sh9</item>
+        <item>@string/sh10</item>
+        <item>@string/sh11</item>
+        <item>@string/sh12</item>
+    </string-array>
+
+    <string-array name="phrases">
+        <item>@string/ph1</item>
+        <item>@string/ph2</item>
+        <item>@string/ph3</item>
+        <item>@string/ph4</item>
+        <item>@string/ph5</item>
+        <item>@string/ph6</item>
+        <item>@string/ph7</item>
+        <item>@string/ph8</item>
+        <item>@string/ph9</item>
+        <item>@string/ph10</item>
+        <item>@string/ph11</item>
+        <item>@string/ph12</item>
+    </string-array>
+
+    <string-array name="weather">
+        <item>@string/w00</item>
+        <item>@string/w01</item>
+        <item>@string/w02</item>
+        <item>@string/w03</item>
+        <item>@string/w04</item>
+        <item>@string/w05</item>
+        <item>@string/w06</item>
+        <item>@string/w07</item>
+        <item>@string/w08</item>
+        <item>@string/w09</item>
+        <item>@string/w10</item>
+        <item>@string/w11</item>
+        <item>@string/w12</item>
+        <item>@string/w13</item>
+        <item>@string/w14</item>
+        <item>@string/w15</item>
+        <item>@string/w16</item>
+        <item>@string/w17</item>
+        <item>@string/w18</item>
+        <item>@string/w19</item>
+        <item>@string/w20</item>
+        <item>@string/w21</item>
+    </string-array>
+
+    <string name="timetravel_distance_km_unit_path">guard/shiguanglicheng/watchface_slpt_number_km.png</string>
+    <string name="timetravel_distance_mi_unit_path">guard/shiguanglicheng/en/watchface_slpt_number_km.png</string>
+    <string name="timetravel_week_path">guard/shiguanglicheng/en/watchface_slpt_number_week_%d.png</string>
+    <string name="watch_label_timetravel_pace">Time travel Pace</string>
+
+    <string name="low_battery_protect">Low battery</string>
+    <string name="low_battery_please_charging">Low battery, please charge</string>
+
+</resources>

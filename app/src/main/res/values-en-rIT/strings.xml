@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amazfit Custom Watchfaces</string>
+    <string name="fuzzytext_watch_face">Fuzzy Text</string>
+    <string name="fancydigits_watch_face">Fancy Digits</string>
+
+    <string name="ph1">*$1 in_punto</string>
+    <string name="ph2">*$1 e_cinque</string>
+    <string name="ph3">*$1 e_dieci</string>
+    <string name="ph4">*$1 e_un quarto</string>
+    <string name="ph5">*$1 e_venti</string>
+    <string name="ph6">*$1 e_venti- cinque</string>
+    <string name="ph7">*$1 e_mezza</string>
+    <string name="ph8">*$1 e trenta- cinque</string>
+    <string name="ph9">*$2 meno venti</string>
+    <string name="ph10">*$2 meno un_quarto</string>
+    <string name="ph11">*$2 meno dieci</string>
+    <string name="ph12">*$2 meno cinque</string>
+    <string name="sh1">una</string>
+    <string name="sh10">dieci</string>
+    <string name="sh11">undici</string>
+    <string name="sh12">dodici</string>
+    <string name="sh2">due</string>
+    <string name="sh3">tre</string>
+    <string name="sh4">quattro</string>
+    <string name="sh5">cinque</string>
+    <string name="sh6">sei</string>
+    <string name="sh7">sette</string>
+    <string name="sh8">otto</string>
+    <string name="sh9">nove</string>
+    <string name="sh0">zero</string>
+    <string name="sh1b">uno</string>
+    <string name="threelines_watch_face">Three Lines</string>
+    <string name="w00">sereno</string>
+    <string name="w01">nuvoloso</string>
+    <string name="w02">nuvoloso</string>
+    <string name="w03">nebbia</string>
+    <string name="w04">foschia</string>
+    <string name="w05">rovesci</string>
+    <string name="w07">pioggia</string>
+    <string name="w08">pioggia</string>
+    <string name="w09">pioggia</string>
+    <string name="w10">pioggia</string>
+    <string name="w11">pioggia</string>
+    <string name="w12">nevischio</string>
+    <string name="w13">grandine</string>
+    <string name="w14">grandine</string>
+    <string name="w15">neve</string>
+    <string name="w16">neve</string>
+    <string name="w17">neve</string>
+    <string name="w18">neve</string>
+    <string name="w19">polvere</string>
+    <string name="w20">sabbia</string>
+    <string name="w21">sabbia</string>
+    <string name="w06">temporale</string>
+
+</resources>
