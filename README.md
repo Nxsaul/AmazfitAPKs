@@ -4,10 +4,6 @@
 
 Thank's to Malvarez's project.
 
-# Project prepared for the development APKs watchfaces
-
-Thank's to Malvarez's project.
-
 # Custom Watchfaces for the Amazfit Pace/Stratos
 
 ## Disclaimers:
