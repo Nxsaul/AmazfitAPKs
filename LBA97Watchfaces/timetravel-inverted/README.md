@@ -10,5 +10,5 @@ The only prerequisites to compile it are:
 This is the source code for the modded Prototype Source. Some code is taken from Marco Fregapane, and mainly from Malvarez.
 Finally the watch face looks like this:
 
-![Malvarez watchface](https://github.com/Nxsaul/AmazfitAPKs/blob/master/LBA97Watchfaces/timetravel-inverted/app/src/main/res/drawable-nodpi/preview_timetravel.png)
+![Watchface preview](https://github.com/Nxsaul/AmazfitAPKs/blob/master/LBA97Watchfaces/timetravel-inverted/app/src/main/res/drawable-nodpi/preview_timetravel.png)
 
