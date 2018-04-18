@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="time_hour_left">90px</dimen>
+    <dimen name="time_hour_top">190px</dimen>
+    <dimen name="time_minute_left">235px</dimen>
+    <dimen name="time_minute_top">190px</dimen>
+    <dimen name="time_hour_left_slpt">41px</dimen>
+    <dimen name="time_hour_top_slpt">121px</dimen>
+    <dimen name="time_minute_left_slpt">182px</dimen>
+    <dimen name="time_minute_top_slpt">121px</dimen>
+    <dimen name="time_font_size">100px</dimen>
+
+    <dimen name="date_left">160px</dimen>
+    <dimen name="date_top">80px</dimen>
+    <dimen name="weekday_left">160px</dimen>
+    <dimen name="weekday_top">120px</dimen>
+    <dimen name="date_left_slpt">107px</dimen>
+    <dimen name="date_top_slpt">64px</dimen>
+    <dimen name="month_left_slpt">135px</dimen>
+    <dimen name="month_top_slpt">64px</dimen>
+    <dimen name="week_left_slpt">135px</dimen>
+    <dimen name="week_top_slpt">103px</dimen>
+    <dimen name="year_left_slpt">164px</dimen>
+    <dimen name="year_top_slpt">64px</dimen>
+    <dimen name="date_font_size">24px</dimen>
+    <dimen name="weekday_font_size">28px</dimen>
+
+    <dimen name="circles_font_size">24px</dimen>
+    <dimen name="circles_thickness">10px</dimen>
+
+    <dimen name="heart_rate_icon_left">63px</dimen>
+    <dimen name="heart_rate_icon_top">215px</dimen>
+
+    <dimen name="steps_icon_left">225px</dimen>
+    <dimen name="steps_icon_top">85px</dimen>
+    <dimen name="sport_icon_left">215px</dimen>
+    <dimen name="sport_icon_top">165px</dimen>
+
+    <dimen name="battery_text_left">184px</dimen>
+    <dimen name="battery_text_top">32px</dimen>
+    <dimen name="battery_text_left_slpt">159px</dimen>
+    <dimen name="battery_text_top_slpt">16px</dimen>
+
+    <dimen name="battery_icon_left">130px</dimen>
+    <dimen name="battery_icon_top">17px</dimen>
+    <dimen name="battery_icon_left_slpt">0px</dimen>
+    <dimen name="battery_icon_top_slpt">17px</dimen>
+
+    <dimen name="heart_rate_text_left">200px</dimen>
+    <dimen name="heart_rate_text_top">285px</dimen>
+    <dimen name="heart_rate_text_left_slpt">151px</dimen>
+    <dimen name="heart_rate_text_top_slpt">269px</dimen>
+
+    <dimen name="calories_text_left">95px</dimen>
+    <dimen name="calories_text_top">228px</dimen>
+    <dimen name="calories_text_left_slpt">55px</dimen>
+    <dimen name="calories_text_top_slpt">212px</dimen>
+
+    <dimen name="floors_text_left">245px</dimen>
+    <dimen name="floors_text_top">227px</dimen>
+    <dimen name="floors_text_left_slpt">232px</dimen>
+    <dimen name="floors_text_top_slpt">210px</dimen>
+
+    <dimen name="steps_text_left">258px</dimen>
+    <dimen name="steps_text_top">90px</dimen>
+    <dimen name="steps_text_left_slpt">227px</dimen>
+    <dimen name="steps_text_top_slpt">73px</dimen>
+
+
+    <dimen name="sport_text_left">67px</dimen>
+    <dimen name="sport_text_top">90px</dimen>
+    <dimen name="sport_text_left_slpt">47px</dimen>
+    <dimen name="sport_text_top_slpt">74px</dimen>
+
+    <dimen name="road_text_left">144px</dimen>
+    <dimen name="road_text_top">285px</dimen>
+    <dimen name="road_text_left_slpt">44px</dimen>
+    <dimen name="road_text_top_slpt">269px</dimen>
+
+    <dimen name="circles_font_size_slpt">24px</dimen>
+
+</resources>
