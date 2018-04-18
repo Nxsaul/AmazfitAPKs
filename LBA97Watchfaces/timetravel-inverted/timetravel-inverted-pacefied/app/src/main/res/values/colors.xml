@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#ffffff</color>
+    <color name="background_slpt">#ffffff</color>
+
+    <color name="circles_battery_colour">#ff0000</color>
+    <color name="circles_battery_colour_slpt">#ff0000</color>
+
+    <color name="circles_steps_colour">#000000</color>
+    <color name="circles_steps_colour_slpt">#000000</color>
+
+    <color name="circles_sport_colour">#00cbdc</color>
+    <color name="circles_sport_colour_slpt">#00ffff</color>
+
+    <color name="heart_colour">#ff2600</color>
+    <color name="heart_colour_slpt">#ff0000</color>
+
+    <color name="circles_background">#ffffff</color>
+
+    <color name="time_colour">#000000</color>
+    <color name="time_colour_slpt">#000000</color>
+
+    <color name="hour_colour">#ff2600</color>
+    <color name="hour_colour_slpt">#ff0000</color>
+
+</resources>

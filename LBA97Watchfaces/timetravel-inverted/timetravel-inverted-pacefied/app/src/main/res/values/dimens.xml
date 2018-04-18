@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="time_hour_left">160px</dimen>
+    <dimen name="time_hour_top">150px</dimen>
+    <dimen name="time_minute_left">160px</dimen>
+    <dimen name="time_minute_top">275px</dimen>
+    <dimen name="time_hour_left_slpt">0px</dimen>
+    <dimen name="time_hour_top_slpt">0px</dimen>
+    <dimen name="time_minute_left_slpt">0px</dimen>
+    <dimen name="time_minute_top_slpt">125px</dimen>
+    <dimen name="time_font_size">140px</dimen>
+
+    <dimen name="date_left">255px</dimen>
+    <dimen name="date_top">155px</dimen>
+
+    <dimen name="weekday_left">255px</dimen>
+    <dimen name="weekday_top">185px</dimen>
+
+    <dimen name="date_left_slpt">224px</dimen>
+    <dimen name="date_top_slpt">125px</dimen>
+    <dimen name="month_left_slpt">262px</dimen>
+    <dimen name="month_top_slpt">125px</dimen>
+    <dimen name="week_left_slpt">230px</dimen>
+    <dimen name="week_top_slpt">155px</dimen>
+    <dimen name="date_font_size">30px</dimen>
+
+    <dimen name="circles_font_size">24px</dimen>
+    <dimen name="circles_thickness">5px</dimen>
+
+    <dimen name="battery_icon_left">65px</dimen>
+    <dimen name="battery_icon_top">95px</dimen>
+    <dimen name="heart_rate_icon_left">80px</dimen>
+    <dimen name="heart_rate_icon_top">130px</dimen>
+
+    <dimen name="steps_icon_left">225px</dimen>
+    <dimen name="steps_icon_top">85px</dimen>
+    <dimen name="sport_icon_left">225px</dimen>
+    <dimen name="sport_icon_top">165px</dimen>
+
+    <dimen name="battery_text_left">78px</dimen>
+    <dimen name="battery_text_top">140px</dimen>
+    <dimen name="widget_text_left">71px</dimen>
+    <dimen name="widget_text_top">185px</dimen>
+
+    <dimen name="steps_text_left">80px</dimen>
+    <dimen name="steps_text_top">100px</dimen>
+    <dimen name="sport_text_left">240px</dimen>
+    <dimen name="sport_text_top">215px</dimen>
+
+    <dimen name="circles_font_size_slpt">24px</dimen>
+    //dimensiones medidas en reposo
+
+    <dimen name="battery_text_left_slpt">67px</dimen>
+    <dimen name="battery_text_top_slpt">118px</dimen>
+    <dimen name="widget_text_left_slpt">41px</dimen>
+    <dimen name="widget_text_top_slpt">160px</dimen>
+
+    <dimen name="steps_text_left_slpt">230px</dimen>
+    <dimen name="steps_text_top_slpt">118px</dimen>
+    <dimen name="sport_text_left_slpt">230px</dimen>
+    <dimen name="sport_text_top_slpt">193px</dimen>
+
+
+
+
+</resources>
