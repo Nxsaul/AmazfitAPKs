@@ -56,22 +56,11 @@ public class MainClock extends DigitalClockWidget {
     private String[] digitalNums = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private byte[][] week_num = new byte[7][];
 
-    private String[] weekDaysDE = new String[]{"SON", "MON", "DIE", "MIT", "DON", "FRE", "SAM"};
-    private String[] weekDaysEN = new String[]{"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
-    private String[] weekDaysES = new String[]{"DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SÁB"};
-    private String[] weekDaysFR = new String[]{"DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM"};
-    private String[] weekDaysITA = new String[]{"DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"};
-    private String Language = "";
 
     @Override
     public void init(Service service) {
         this.background = service.getResources().getDrawable(R.drawable.background_heart);
         this.background.setBounds(0,0,320,320);
-
-        this.Language = Locale.getDefault().getISO3Country();
-        if (this.Language.isEmpty()) {
-            this.Language = "GBR";
-        }
 
         this.leftHour = service.getResources().getDimension(R.dimen.time_hour_left);
         this.topHour = service.getResources().getDimension(R.dimen.time_hour_top);
@@ -108,21 +97,7 @@ public class MainClock extends DigitalClockWidget {
         this.weekdayFont.setTextAlign(Paint.Align.CENTER);
     }
 
-    private String[] LocalizeWeekDay(String Country) {
-        if (Country.contentEquals("ITA")) {
-            return this.weekDaysITA;
-        }
-        if (Country.contentEquals("FRA")) {
-            return this.weekDaysFR;
-        }
-        if (Country.contentEquals("ESP")) {
-            return this.weekDaysES;
-        }
-        if (Country.contentEquals("GER")) {
-            return this.weekDaysDE;
-        }
-        return this.weekDaysEN;
-    }
+
 
     @Override
     public void onDrawDigital(Canvas canvas, float width, float height, float centerX, float centerY, int seconds, int minutes, int hours, int year, int month, int day, int week, int ampm) {
@@ -135,13 +110,10 @@ public class MainClock extends DigitalClockWidget {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_WEEK, week);
         String date = String.format("%02d - %02d", day, month);
-//original:  String date = String.format("%02d / %02d  %s", day, month, new SimpleDateFormat("EE").format(calendar.getTime()));
         canvas.drawText(date, leftDate, topDate, this.dateFont);
 
-        int nWeekDay = calendar.get(7) - 1;
-        String[] sWeekDays = LocalizeWeekDay(this.Language);
-        String sWeekDay = String.format("%s", new Object[]{sWeekDays[nWeekDay]});
-        canvas.drawText(sWeekDay, leftWeekday, topWeekday, this.weekdayFont);
+        String weekday = String.format("%S", new SimpleDateFormat("EE").format(calendar.getTime()));
+        canvas.drawText(weekday, leftWeekday, topWeekday, this.weekdayFont);
     }
 
     @Override
@@ -195,7 +167,7 @@ public class MainClock extends DigitalClockWidget {
         monthLayout.add(new SlptMonthHView());
         monthLayout.add(new SlptMonthLView());
 
-      //  SlptWeekView weekView = new SlptWeekView();
+
 
         for (SlptLayout component : Arrays.asList(monthLayout, dayLayout)) {
             component.setTextAttrForAll(
@@ -204,33 +176,17 @@ public class MainClock extends DigitalClockWidget {
                     timeTypeFace
             );
         }
-    /*    weekView.setTextAttr(
-                service.getResources().getDimension(R.dimen.date_font_size),
-                -16777216,
-                timeTypeFace
-        );
-*/
+
         dayLayout.setStart(
                 (int) service.getResources().getDimension(R.dimen.date_left_slpt),
                 (int) service.getResources().getDimension(R.dimen.date_top_slpt));
         monthLayout.setStart(
                 (int) service.getResources().getDimension(R.dimen.month_left_slpt),
                 (int) service.getResources().getDimension(R.dimen.month_top_slpt));
- /*       weekView.setStart(
-                (int) service.getResources().getDimension(R.dimen.week_left_slpt),
-                (int) service.getResources().getDimension(R.dimen.week_top_slpt));
-        weekView.alignX=2;
-        weekView.alignY=0;
-        weekView.setRect(80,50);
-*/
-        this.Language = Locale.getDefault().getISO3Country();
-        if (this.Language.isEmpty()) {
-            this.Language = "GBR";
-        }
+
 
         SlptLinearLayout WeekdayLayout = new SlptLinearLayout();
         WeekdayLayout.add(new SlptWeekView());
-        WeekdayLayout.setStringPictureArrayForAll(LocalizeWeekDay(this.Language));
         WeekdayLayout.setStart(
                 (int) service.getResources().getDimension(R.dimen.week_left_slpt),
                 (int) service.getResources().getDimension(R.dimen.week_top_slpt));
