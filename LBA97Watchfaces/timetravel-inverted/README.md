@@ -1,13 +1,14 @@
 # Watchface for Amazfit smartwatch
 
-This is my very first development in Android.
+Thanks Malvarez, Marco Fregapane and Dany for their help.
 
 The only prerequisites to compile it are:
 
-* Add the *HuamiWatchFaces* application as a jar dependency into the libs folder (version 1.3.2b from the PACE firmware)
+* Add the *HuamiWatchFaces* application as a jar dependency into the libs folder (instructions in the main folder)
 * Use Android SDK 21
 
+This is the source code for the modded Prototype Source. Some code is taken from Marco Fregapane, and mainly from Malvarez.
 Finally the watch face looks like this:
 
-![Malvarez watchface](https://github.com/manuel-alvarez-alvarez/malvarez-watchface/raw/master/app/src/main/res/drawable-nodpi/preview_malvarez.png)
+![Watchface preview](https://github.com/Nxsaul/AmazfitAPKs/blob/master/LBA97Watchfaces/timetravel-inverted/app/src/main/res/drawable-nodpi/preview_timetravel.png)
 
