@@ -26,7 +26,6 @@ public class MainWatchFaceSplt extends AbstractWatchFaceSlpt {
                 new CirclesWidget(),
                 new HeartRateWidget(),
                 new CaloriesWidget(),
-                new WeatherWidget(),
                 new BatteryWidget(),
                 new FloorWidget()
         );

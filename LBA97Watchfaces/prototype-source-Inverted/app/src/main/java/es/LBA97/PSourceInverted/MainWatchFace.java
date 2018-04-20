@@ -24,7 +24,6 @@ public class MainWatchFace extends AbstractWatchFace {
                 new HeartRateWidget(),
                 new CaloriesWidget(),
                 new FloorWidget(),
-                new WeatherWidget(),
                 new BatteryWidget()
 
         );

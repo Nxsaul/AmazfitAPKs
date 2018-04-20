@@ -29,7 +29,7 @@ dependencies {
     compile('com.android.support:appcompat-v7:21.0.3') {
         exclude module: 'support-v4'
     }
-    implementation files('libs/HuamiWatchFaces49k.jar')
+    implementation files('libs/HuamiWatchFaces.jar')
 }
 
 
