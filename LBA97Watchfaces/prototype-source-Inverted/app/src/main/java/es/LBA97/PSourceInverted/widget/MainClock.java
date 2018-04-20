@@ -55,23 +55,11 @@ public class MainClock extends DigitalClockWidget {
 
     private String[] digitalNums = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
-    private String[] weekDaysDE = new String[]{"SON", "MON", "DIE", "MIT", "DON", "FRE", "SAM"};
-    private String[] weekDaysEN = new String[]{"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
-    private String[] weekDaysES = new String[]{"DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SAB"};
-    private String[] weekDaysFR = new String[]{"DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM"};
-    private String[] weekDaysITA = new String[]{"DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"};
-    private String Language = "";
-
     @Override
     public void init(Service service) {
 
         this.background = service.getResources().getDrawable(R.drawable.background);
         this.background.setBounds(0, 0, 320, 320);
-
-        this.Language = Locale.getDefault().getISO3Country();
-        if (this.Language.isEmpty()) {
-            this.Language = "GBR";
-        }
 
         this.leftHour = service.getResources().getDimension(R.dimen.time_hour_left);
         this.topHour = service.getResources().getDimension(R.dimen.time_hour_top);
@@ -109,22 +97,6 @@ public class MainClock extends DigitalClockWidget {
 
     }
 
-    private String[] LocalizeWeekDay(String Country) {
-        if (Country.contentEquals("ITA")) {
-            return this.weekDaysITA;
-        }
-        if (Country.contentEquals("FRA")) {
-            return this.weekDaysFR;
-        }
-        if (Country.contentEquals("ESP")) {
-            return this.weekDaysES;
-        }
-        if (Country.contentEquals("GER")) {
-            return this.weekDaysDE;
-        }
-        else{return this.weekDaysEN;}
-
-    }
 
     @Override
     public void onDrawDigital(Canvas canvas, float width, float height, float centerX, float centerY, int seconds, int minutes, int hours, int year, int month, int day, int week, int ampm) {
@@ -139,19 +111,16 @@ public class MainClock extends DigitalClockWidget {
         calendar.set(Calendar.DAY_OF_WEEK, week);
         String date = String.format("%02d.%02d.%02d", day, month, year);
         canvas.drawText(date, leftDate, topDate, this.dateFont);
- /*       String weekday = String.format("%S", new SimpleDateFormat("EE").format(calendar.getTime()));
+
+        String weekday = String.format("%S", new SimpleDateFormat("EE").format(calendar.getTime()));
         canvas.drawText(weekday, leftWeekday, topWeekday, this.weekdayFont);
-*/
+
         int nSecond = calendar.get(13);
         String segundero = String.format(":");
         if(nSecond%2 ==0 ) {
             canvas.drawText(segundero, 160, 190, this.hourFont);
         }
 
-        int nWeekDay = calendar.get(7) - 1;
-        String[] sWeekDays = LocalizeWeekDay(this.Language);
-        String sWeekDay = String.format("%s", new Object[]{sWeekDays[nWeekDay]});
-        canvas.drawText(sWeekDay, leftWeekday, topWeekday, this.weekdayFont);
     }
 
 
@@ -276,14 +245,9 @@ public class MainClock extends DigitalClockWidget {
 
         Typeface weekfont = ResourceManager.getTypeFace(service.getResources(), ResourceManager.Font.IRRESISTIBLE_HOLLYWOOD);
 
-        this.Language = Locale.getDefault().getISO3Country();
-        if (this.Language.isEmpty()) {
-            this.Language = "GBR";
-        }
 
         SlptLinearLayout WeekdayLayout = new SlptLinearLayout();
         WeekdayLayout.add(new SlptWeekView());
-        WeekdayLayout.setStringPictureArrayForAll(LocalizeWeekDay(this.Language));
         WeekdayLayout.setStart(
                 (int) service.getResources().getDimension(R.dimen.week_left_slpt),
                 (int) service.getResources().getDimension(R.dimen.week_top_slpt));
