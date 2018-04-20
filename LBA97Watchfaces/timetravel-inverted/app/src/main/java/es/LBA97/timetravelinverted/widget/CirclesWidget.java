@@ -72,21 +72,19 @@ public class CirclesWidget extends AbstractWidget {
     public void init(Service service) {
         this.thickness = (int) service.getResources().getDimension(R.dimen.circles_thickness);
 
-        /*this.backgroundColour = service.getResources().getColor(R.color.circles_background);
-        Fondo de los círculos
-        */
+        
 
         this.batteryColour = service.getResources().getColor(R.color.circles_battery_colour);
         this.batteryIcon = service.getResources().getDrawable(R.drawable.battery, null);
-        //this.setDrawableBounds(this.batteryIcon, service.getResources().getDimension(R.dimen.battery_icon_left), service.getResources().getDimension(R.dimen.battery_icon_top));
+        
 
         this.stepsColour = service.getResources().getColor(R.color.circles_steps_colour);
         this.stepsIcon = service.getResources().getDrawable(R.drawable.steps, null);
-        //this.setDrawableBounds(this.stepsIcon, service.getResources().getDimension(R.dimen.steps_icon_left), service.getResources().getDimension(R.dimen.steps_icon_top));
+        
 
         this.sportColour = service.getResources().getColor(R.color.circles_sport_colour);
         this.sportIcon = service.getResources().getDrawable(R.drawable.sport, null);
-        //this.setDrawableBounds(this.sportIcon, service.getResources().getDimension(R.dimen.sport_icon_left), service.getResources().getDimension(R.dimen.sport_icon_top));
+        
 
         this.top_image = service.getResources().getDrawable(R.drawable.top_image, null);
         this.setDrawableBounds(this.top_image, 0, 0);
@@ -123,10 +121,10 @@ public class CirclesWidget extends AbstractWidget {
         int count = canvas.save();
 
         int radius = Math.round(Math.min(width / 2, height / 2)) - this.thickness   ;
-// modificado this.thickness por 10
+
         RectF oval = new RectF(centerX-radius+2, centerY - radius, centerX + radius, centerY + radius);
-//movida la parte izquierda un poco más al centro para que se vea bien
-        // rotate from 0 to 270 degrees
+
+        
         canvas.rotate(90, centerX, centerY);
 
 
@@ -154,28 +152,10 @@ public class CirclesWidget extends AbstractWidget {
             canvas.drawCircle(px, py, this.thickness / 3f, circle);
             canvas.drawCircle(px, py, this.thickness / 6f, circle);
         }
-/*
-        oval = nextOval(oval);
-        this.ring.setColor(this.backgroundColour);
-        this.ring.setStrokeWidth(20);
-        canvas.drawArc(oval, startAngleBattery, arcSizeBattery, false, ring);
-        if (batterySweepAngle != null) {
-            float px = getPointX(oval, centerX, startAngleBattery, batterySweepAngle);
-            float py = getPointY(oval, centerY, startAngleBattery, batterySweepAngle);
-            this.ring.setColor(this.stepsColour);
-            canvas.drawArc(oval, startAngleBattery, batterySweepAngle, false, ring);
-            canvas.drawCircle(px, py, this.thickness / 3f, circle);
-            canvas.drawCircle(px, py, this.thickness / 6f, circle);
-        }
-*/
+
         canvas.restoreToCount(count);
-        // TERMINA LA ROTACIÓN DE LA LÍNEA 130
-/*
-        if (this.stepsData != null) {
-            String text = String.format("%s", this.stepsData.getSteps());
-            canvas.drawText(text, stepsTextLeft, stepsTextTop, textPaint);
-        }
-*/
+        
+
         this.top_image.draw(canvas);
     }
 
@@ -236,7 +216,7 @@ public class CirclesWidget extends AbstractWidget {
         oval.bottom = oval.bottom - 12 - MARGIN;
         return oval;
     }
-    //cambiado this.thickness por 12.
+    
 
     private float getPointX(RectF oval, float cx, float startAngle, float sweepAngle) {
         float width = oval.right - oval.left;
@@ -262,13 +242,7 @@ public class CirclesWidget extends AbstractWidget {
                 timeTypeFace
         );
 
-/*        steps.setStart(
-                (int) service.getResources().getDimension(R.dimen.widget_text_left_slpt),
-                (int) service.getResources().getDimension(R.dimen.widget_text_top_slpt));
-        steps.alignX=2;
-        steps.alignY=0;
-        steps.setRect(60,60);
-*/
+
 
         SlptPowerArcAnglePicView powerArcView = new SlptPowerArcAnglePicView();
         powerArcView.setImagePicture(Util.assetToBytes(service, "battery_splt.png"));

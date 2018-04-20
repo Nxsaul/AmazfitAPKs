@@ -5,9 +5,7 @@ import android.graphics.Canvas;
 
 import es.LBA97.PSourceInverted.data.MultipleWatchDataListener;
 
-/**
- * Base class for widgets
- */
+
 public interface Widget extends MultipleWatchDataListener, HasSlptViewComponent {
 
     int getX();

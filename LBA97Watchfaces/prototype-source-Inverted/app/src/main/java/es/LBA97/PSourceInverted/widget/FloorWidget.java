@@ -21,9 +21,7 @@ import es.LBA97.PSourceInverted.data.DataType;
 import es.LBA97.PSourceInverted.data.TodayFloor;
 import es.LBA97.PSourceInverted.resource.ResourceManager;
 
-/**
- * Widget
- */
+
 
 public class FloorWidget extends AbstractWidget {
     private TextPaint textPaint;

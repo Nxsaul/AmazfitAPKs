@@ -19,9 +19,7 @@ import es.LBA97.PSourceInverted.data.Calories;
 import es.LBA97.PSourceInverted.data.DataType;
 import es.LBA97.PSourceInverted.resource.ResourceManager;
 
-/**
- * Widget de Calories
- */
+
 
 public class CaloriesWidget extends AbstractWidget {
     private TextPaint textPaint;

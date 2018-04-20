@@ -44,15 +44,15 @@ public class CirclesWidget extends AbstractWidget {
 
     private Battery batteryData;
     private Float batterySweepAngle = null;
- //   private Drawable batteryIcon;
+ 
 
     private Steps stepsData;
     private Float stepsSweepAngle = null;
- //   private Drawable stepsIcon;
+ 
 
     private TodayDistance sportData;
     private Float sportSweepAngle = null;
-   // private Drawable sportIcon;
+   
 
     private TotalDistance roadData;
 
@@ -82,16 +82,16 @@ public class CirclesWidget extends AbstractWidget {
         this.backgroundColour = service.getResources().getColor(R.color.circles_background);
 
         this.batteryColour = service.getResources().getColor(R.color.circles_battery_colour);
-        //  this.batteryIcon = service.getResources().getDrawable(R.drawable.battery, null);
-        // this.setDrawableBounds(this.batteryIcon, service.getResources().getDimension(R.dimen.battery_icon_left), service.getResources().getDimension(R.dimen.battery_icon_top));
+        
+        
 
         this.stepsColour = service.getResources().getColor(R.color.circles_steps_colour);
-        //   this.stepsIcon = service.getResources().getDrawable(R.drawable.steps, null);
-        //this.setDrawableBounds(this.stepsIcon, service.getResources().getDimension(R.dimen.steps_icon_left), service.getResources().getDimension(R.dimen.steps_icon_top));
+        
+        
 
         this.sportColour = service.getResources().getColor(R.color.circles_sport_colour);
-        //  this.sportIcon = service.getResources().getDrawable(R.drawable.sport, null);
-        // this.setDrawableBounds(this.sportIcon, service.getResources().getDimension(R.dimen.sport_icon_left), service.getResources().getDimension(R.dimen.sport_icon_top));
+        
+        
 
         this.textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         this.textPaint.setTypeface(ResourceManager.getTypeFace(service.getResources(), ResourceManager.Font.PROTOTYPE_SOURCE));
@@ -133,14 +133,14 @@ public class CirclesWidget extends AbstractWidget {
 
         RectF oval = new RectF(centerX - radius, centerY - radius, centerX + radius, centerY + radius);
 
-        // rotate from 0 to 270 degrees
+        
         canvas.rotate(90, centerX, centerY);
 
         canvas.restoreToCount(count);
 
-        // this.batteryIcon.draw(canvas);
-        //this.stepsIcon.draw(canvas);
-        // this.sportIcon.draw(canvas);
+        
+        
+        
 
         if (this.batteryData != null) {
             String text = String.format("%02d%%", this.batteryData.getLevel() * 100 / this.batteryData.getScale());
@@ -253,7 +253,7 @@ public class CirclesWidget extends AbstractWidget {
         SlptLinearLayout steps = new SlptLinearLayout();
         steps.alignX = (byte)1;
         steps.alignY = (byte)2;
-       // steps.setRect(80,80);
+       
         steps.add(new SlptTodayStepNumView());
         steps.setTextAttrForAll(
                 service.getResources().getDimension(R.dimen.circles_font_size_slpt),

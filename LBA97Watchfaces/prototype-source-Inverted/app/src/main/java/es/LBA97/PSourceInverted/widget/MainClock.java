@@ -33,9 +33,7 @@ import java.util.Locale;
 import es.LBA97.PSourceInverted.R;
 import es.LBA97.PSourceInverted.resource.ResourceManager;
 
-/**
- * Clock
- */
+
 public class MainClock extends DigitalClockWidget {
 
     private TextPaint hourFont;
@@ -162,29 +160,7 @@ public class MainClock extends DigitalClockWidget {
         minuteLayout.alignX = (byte) 2;
         minuteLayout.alignY = (byte) 0;
         minuteLayout.setRect(110, 120);
-/*
-        SlptLinearLayout timeLayout = new SlptLinearLayout();
-        SlptPictureView space = new SlptPictureView();
-        space.setStringPicture(" ");
-        space.setStringPicture("\u0020 \u0020");
-        timeLayout.add(new SlptHourHView());
-        timeLayout.add(new SlptHourLView());
-        timeLayout.add(space);
-        timeLayout.add(new SlptMinuteHView());
-        timeLayout.add(new SlptMinuteLView());
-        timeLayout.setStringPictureArrayForAll(this.digitalNums);
-        timeLayout.setTextAttrForAll(
-                service.getResources().getDimension(R.dimen.time_font_size),
-                -16777216 ,
-                timeTypeFace
-        );
-        timeLayout.setStart(
-                0,121
-        );
-        timeLayout.alignX = (byte) 2;
-        timeLayout.alignY = (byte) 0;
-        timeLayout.setRect(320, 120);
-*/
+
 
         SlptLinearLayout secondsLayout = new SlptLinearLayout();
         SlptPictureView colon = new SlptPictureView();

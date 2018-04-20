@@ -20,9 +20,7 @@ import es.LBA97.PSourceInverted.data.Battery;
 import es.LBA97.PSourceInverted.data.DataType;
 import es.LBA97.PSourceInverted.resource.ResourceManager;
 
-/**
- * Battery widget
- */
+
 
 public class BatteryWidget extends AbstractWidget {
     private Battery batteryData;

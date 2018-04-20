@@ -31,9 +31,7 @@ import java.util.Locale;
 import es.LBA97.timetravelinverted.R;
 import es.LBA97.timetravelinverted.resource.ResourceManager;
 
-/**
- * Clock
- */
+
 public class MainClock extends DigitalClockWidget {
 
     private TextPaint hourFont;
@@ -120,8 +118,8 @@ public class MainClock extends DigitalClockWidget {
     public List<SlptViewComponent> buildSlptViewComponent(Service service) {
         SlptPictureView background = new SlptPictureView();
         background.setImagePicture(Util.assetToBytes(service, "background_heart_splt.png"));
-        //background.setImagePicture(Util.assetToBytes(service, "background_steps_splt.png"));
-        //background.setImagePicture(Util.assetToBytes(service, "background_calories_splt.png"));
+        
+        
         SlptLinearLayout hourLayout = new SlptLinearLayout();
         hourLayout.add(new SlptHourHView());
         hourLayout.add(new SlptHourLView());

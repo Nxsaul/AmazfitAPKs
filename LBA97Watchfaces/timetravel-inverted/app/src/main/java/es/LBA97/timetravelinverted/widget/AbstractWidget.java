@@ -9,9 +9,7 @@ import java.util.List;
 import es.LBA97.timetravelinverted.data.DataType;
 import es.LBA97.timetravelinverted.data.MultipleWatchDataListener;
 
-/**
- * Base class for shapes
- */
+
 public abstract class AbstractWidget implements Widget, MultipleWatchDataListener {
 
     private int x = 0;
@@ -38,7 +36,7 @@ public abstract class AbstractWidget implements Widget, MultipleWatchDataListene
     }
 
     public void init(Service service) {
-        // empty
+        
     }
 
     @Override

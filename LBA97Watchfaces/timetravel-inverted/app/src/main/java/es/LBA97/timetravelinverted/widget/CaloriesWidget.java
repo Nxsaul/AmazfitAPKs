@@ -19,9 +19,7 @@ import es.LBA97.timetravelinverted.data.Calories;
 import es.LBA97.timetravelinverted.data.DataType;
 import es.LBA97.timetravelinverted.resource.ResourceManager;
 
-/**
- * Widget de Calories
- */
+
 
 public class CaloriesWidget extends AbstractWidget {
     private TextPaint textPaint;

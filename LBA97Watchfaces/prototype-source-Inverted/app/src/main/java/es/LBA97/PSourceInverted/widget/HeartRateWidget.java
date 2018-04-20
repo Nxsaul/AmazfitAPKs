@@ -19,9 +19,7 @@ import es.LBA97.PSourceInverted.data.DataType;
 import es.LBA97.PSourceInverted.data.HeartRate;
 import es.LBA97.PSourceInverted.resource.ResourceManager;
 
-/**
- * Heart rate widget
- */
+
 public class HeartRateWidget extends AbstractWidget {
 
     private TextPaint textPaint;
@@ -61,7 +59,7 @@ public class HeartRateWidget extends AbstractWidget {
     public void draw(Canvas canvas, float width, float height, float centerX, float centerY) {
         String text = heartRate == null || heartRate.getHeartRate() < 25 ? "--" : String.format("%d bpm", heartRate.getHeartRate());
         canvas.drawText(text, textLeft, textTop, textPaint);
-        //this.heartIcon.draw(canvas);
+        
     }
 
     @Override

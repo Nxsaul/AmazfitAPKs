@@ -17,9 +17,7 @@ import es.LBA97.timetravelinverted.data.DataType;
 import es.LBA97.timetravelinverted.data.HeartRate;
 import es.LBA97.timetravelinverted.resource.ResourceManager;
 
-/**
- * Heart rate widget
- */
+
 public class HeartRateWidget extends AbstractWidget {
 
     private TextPaint textPaint;
